@@ -56,15 +56,16 @@ class RomanNumeralTool implements RomanNumeralGenerator {
   }
 
   function parse($romanString) {
+    
+    // Roman numerals should be uppercase
+    $romanString = strtoupper($romanString);
+    
     // Check input is not empty and it doesn't have non Roman characters within it
     if ( $romanString == "" || !preg_match('/^[I V X L C D M]*$/', $romanString))  {
         error_log("Please provide a correct Roman numeral (e.g. I,II,V,X)", 0);
         return false;
     }
-    
-    // Roman numerals should be uppercase
-    $romanString = strtoupper($romanString);
-    
+
     // Build map of Roman representations against corresponding Arabic numbers
     $romanToArabicTable = array(
        "M" => "1000", "CM" => "900",

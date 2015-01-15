@@ -1,6 +1,5 @@
 <?php
 // Receive AJAX requests for conversions and supply the results
-date_default_timezone_set('Europe/London');
 
 function from_ajax() {
     return isset($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) === 'xmlhttprequest';
