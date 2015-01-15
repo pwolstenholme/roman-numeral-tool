@@ -35,9 +35,8 @@ $(function() {
     // Check Arabic field is numeric
     $(".js-arabicInput").on("change keyup focus blur", function() {
         var value = $(this).val();
-        // originally if ( !$.isNumeric( value ) && value.length > 0 ) {
         // Only allow numbers that are between 1 and 3999
-        if ( ( isNaN(value) && value.length > 0 ) || parseInt(value) <= 0 || parseInt(value) > 3999 ) {
+        if ( ( !$.isNumeric( value ) && value.length > 0 ) || parseInt(value) <= 0 || parseInt(value) > 3999 ) {
             triggerError(
                 'This field is only meant for Arabic numbers like 1,2,5,10. The maximum value is 3999 and the minimum is 1.', this);
         } else {
