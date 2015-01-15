@@ -1,0 +1,4 @@
+.DS_Store
+tests/config.php
+web/node_modules/
+web/.sass-cache/

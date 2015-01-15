@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Convert between Roman and Arabic numbers</title>
+
+        <!-- Bootstrap -->
+        <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+        <link href="//fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+        <link href="//fonts.googleapis.com/css?family=Marcellus+SC" rel="stylesheet" type="text/css">
+        <link href="css/custom.css" rel="stylesheet" type="text/css">
+
+        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+          <script src="//oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+          <script src="//oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+    </head>
+    <body>
+    <div class="container">   
+      <div class="row">
+        <div class="vert-center col-md-6 col-md-offset-3">
+            <div class="panel panel-default">
+                <div class="panel-heading text-center">
+                    <h1 class="panel-title">Convert between Roman <span class="text-muted">(<span class="roman-type">I,II,II</span>)</span> and Arabic <span class="text-muted">(1,2,3)</span> numbers</h1>
+                </div>
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group text-right">
+                                <label class="control-label" for="romanInput">Roman numerals:</label>
+                                <input autofocus type="text" class="js-romanInput romanInput form-control input-lg text-uppercase text-right roman-type" id="romanInput" pattern="[A-Za-z]" placeholder="e.g. MCMLXXXIX" tabindex="1">
+                                <p class="text-muted">e.g. <span class="roman-type">MCMLXXXIX</span></p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group text-left">
+                                <label class="control-label" for="arabicInput">Arabic numbers:</label>
+                                <!-- was type number but didn't pass to jQuery -->
+                                <input type="text" class="js-arabicInput arabicInput form-control input-lg" id="arabicInput" placeholder="e.g. 1989" tabindex="2"> <!-- min="1" max="3999" pattern="\d+"  -->
+                                <p class="text-muted">e.g. 1989</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="js-error-row error-row row">
+                        <div class="col-md-12">
+                            <div class="alert alert-danger no-margin-bottom" role="alert">
+                                <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+                                <span class="sr-only">Error:</span>
+                                <span class="js-error-text">An error has occurred</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                
+            </div>
+            <div class="text-center text-light">
+                &copy; <a href="//wolstenhol.me" rel="author">Philip Wolstenholme</a> <span class="roman-type" title="2015">MMXV</span>
+            <div>
+        </div>
+        
+      </div>
+    </div> <!-- /container -->
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="js/main.min.js"></script>  
+
+
+    </body>
+</html>
